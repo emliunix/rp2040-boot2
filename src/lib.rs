@@ -15,3 +15,7 @@ pub static BOOT_LOADER_AT25SF128A: [u8; 256] =
 /// The bootloader to use if you want to boot from an GD25Q64CS flash device
 pub static BOOT_LOADER_GD25Q64CS: [u8; 256] =
     *include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/bin/boot2_gd25q64cs.padded.bin"));
+
+/// The bootloader to use if you want to boot from an GD25Q16CS flash device
+pub static BOOT_LOADER_GD25Q16CS_HPM: [u8; 256] =
+    *include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/bin/boot2_gd25q16cs_hpm.padded.bin"));
